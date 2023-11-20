@@ -1,0 +1,10 @@
+services:
+  db:
+    build:
+      dockerfile: ./Dockerfile
+      context: "."
+    ports:
+      - "8080:8080"
+    restart: "unless-stopped"
+    volumes:
+      - "./.pb_data:/app/pb_data"
